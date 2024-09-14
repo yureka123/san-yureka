@@ -1,7 +1,4 @@
-
 import google.generativeai as genai
-#from google.colab import userdata
-
 import streamlit as st
 import config
 from langchain import PromptTemplate, LLMChain
@@ -10,7 +7,7 @@ import google.generativeai as palm  # Google LLM API (Gemini Pro)
 # Setup Gemini Pro API client
 def setup_gemini():
     # Load API key from environment variable (or replace with your key directly)
-    api_key = 'AIzaSyBQ-HFFDRhzPdoH6xawVBb-yyEMqL8aqD4'
+    api_key = st.secrets.api_key
     palm.configure(api_key=api_key)
 
 # Function to run LLM chain and generate response
