@@ -6,7 +6,7 @@ import google.generativeai as palm  # Google LLM API (Gemini Pro)
 # Setup Gemini Pro API client
 def setup_gemini():
     # Load API key from environment variable (or replace with your key directly)
-    api_key = st.secrets["API_KEY"]
+    api_key = st.secrets["general"]["api_key"]
     palm.configure(api_key=api_key)
 
 # Function to run LLM chain and generate response
