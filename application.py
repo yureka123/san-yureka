@@ -1,6 +1,5 @@
 import google.generativeai as genai
 import streamlit as st
-import config
 from langchain import PromptTemplate, LLMChain
 import google.generativeai as palm  # Google LLM API (Gemini Pro)
 
