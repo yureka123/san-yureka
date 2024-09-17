@@ -14,10 +14,7 @@ def generate_response(action, user_input):
     # Define the prompt template
     prompt_template = PromptTemplate(
         input_variables=["action", "user_input"],
-        template="""You are an AI that acts as a {action}. Based on the following input: {user_input}, provide a detailed explanation. If the role is technical (e.g. developer), include all relevant information, sample examples, 
-        and code snippets. Ensure the response is comprehensive and tailored to the specified role. 
-        If the query: {user_input} is not related to your role as a {action}, respond with: "The provided query does not align with the role of {action}. Please provide a query related to {action}.
-        """
+        template="""You are an AI that acts as a {action}. Based on the following input: {user_input}, provide a response."""
     )
 
     # Create the prompt from user input
